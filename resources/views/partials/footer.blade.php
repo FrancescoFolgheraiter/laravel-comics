@@ -36,27 +36,32 @@ $linksFooter =[
 @endphp
 <footer>
     <section>
-        <div class="container">
-            <ul>
-
-                @foreach($linksFooter as $key => $link)
-                <li>
-                {{$key}}
-                    <ul>
-                        @foreach($link as $key=> $elem)
-                        <li>
-                            {{$elem}}
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-6">
+                    <ul class="d-flex flex-wrap">
+                        @foreach($linksFooter as $key => $link)
+                        <li class="m-3">
+                            <h4>
+                                {{$key}}
+                            </h4>
+                            <ul>
+                                @foreach($link as $key=> $elem)
+                                <li>
+                                    {{$elem}}
+                                </li>
+                                @endforeach
+                            </ul>
                         </li>
                         @endforeach
                     </ul>
-                </li>
-                @endforeach
-            </ul>
+                </div>
+            </div>
         </div>
     </section>
     <section>
         <div class="container">
-
+            ciao
         </div>
     </section>
 </footer>
