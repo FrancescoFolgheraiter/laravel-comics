@@ -48,16 +48,34 @@
 @endphp
 
 <header>
-    <nav class="container d-flex p-3">
-        <ul class="d-flex list-unstyled justify-content-between flex-grow-1 me-3">
-            @foreach ($links as $link)
-                <li>
-                    <a href="{{ $link['url'] }}">
-                        {{ $link['label'] }}
-                    </a>
-                </li>
-            @endforeach
-        </ul>
-        <input type="text">
-    </nav>
+    <section>
+        <div class="container d-flex justify-content-end text-white p-1">
+            <div class="me-5">
+                DC POWER VISA
+            </div>
+            <div>
+                ADDITIONAL DC SITES
+            </div>
+        </div>
+    </section>
+    <section>
+        <nav class="container d-flex p-3">
+            <ul class="h-100 d-flex list-unstyled justify-content-between align-items-center flex-grow-1 me-3">
+                @foreach ($links as $link)
+                    <li class="h-100">
+                        <a href="{{ $link['url'] }}">
+                            {{ $link['label'] }}
+                        </a>
+                    </li>
+    
+                @endforeach
+            </ul>
+            <div>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </form>
+            </div>
+        </nav>
+    </section>
 </header>

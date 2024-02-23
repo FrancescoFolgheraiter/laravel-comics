@@ -1,5 +1,13 @@
 @import "~bootstrap/scss/bootstrap";
+//variabili colori
+$primary-color:#0282f9;
 
+
+header{
+    > *:first-child{
+        background-color: $primary-color;
+    }
+}
 main {
     background-color: lightcoral;
 }
