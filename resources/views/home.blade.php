@@ -4,7 +4,7 @@
 
 @section('main-content')
 <h1>
-    Laravel Start 1
+    DC 
 </h1>
 
 <h2>

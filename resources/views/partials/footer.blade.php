@@ -44,7 +44,7 @@ $socialFooter =[
 <footer>
     <section id="footer-top">
         <div class="container text-white">
-            <div class="row">
+            <div class="row g-0">
                 <div class="col-6">
                     <ul class="d-flex flex-wrap">
                         @foreach($linksFooter as $key => $link)

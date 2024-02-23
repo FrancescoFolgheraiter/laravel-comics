@@ -3,6 +3,7 @@
 $primary-color:#0282f9;
 $main-color:#1c1c1c;
 $footer-color:#303030;
+//reset img
 
 header{
     > *:first-child{
@@ -10,7 +11,17 @@ header{
     }
 }
 main {
-    background-color: lightcoral;
+    background-color: $main-color;
+    color:white;
+    .jumbotron{
+        max-height: 350px;
+        object-fit: center;
+        overflow: hidden;
+        img{
+            height: 100%;
+        }
+    }
+
 }
 
 .gatto-img {
