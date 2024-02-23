@@ -2,38 +2,62 @@
     $links = [
         [
             'url' => '/',
-            'label' => 'Home',
-            'active' => true,
+            'label' => 'DC',
         ],
         [
-            'url' => '/chi-siamo',
-            'label' => 'Chi siamo',
-            'active' => true,
+            'url' => '/characters',
+            'label' => 'characters',
         ],
         [
-            'url' => '/contatti',
-            'label' => 'Contatti',
-            'active' => false,
+            'url' => '/comics',
+            'label' => 'comics',
+        ],
+        [
+            'url' => '/movies',
+            'label' => 'movies',
+        ],
+        [
+            'url' => '/tv',
+            'label' => 'tv',
+        ],
+        [
+            'url' => '/games',
+            'label' => 'games',
+        ],
+        [
+            'url' => '/collectibles',
+            'label' => 'collectibles',
+        ],
+        [
+            'url' => '/videos',
+            'label' => 'videos',
+        ],
+        [
+            'url' => '/fans',
+            'label' => 'fans',
+        ],
+        [
+            'url' => '/news',
+            'label' => 'news',
+        ],
+        [
+            'url' => '/shop',
+            'label' => 'shop',
         ],
     ];
 @endphp
 
 <header>
-    <nav>
-        <ul>
+    <nav class="container d-flex p-3">
+        <ul class="d-flex list-unstyled justify-content-between flex-grow-1 me-3">
             @foreach ($links as $link)
                 <li>
-                    @if ($link['active'])
-                        <a href="{{ $link['url'] }}">
-                            {{ $link['label'] }}
-                        </a>
-                    @else
-                        <del>
-                            {{ $link['label'] }}
-                        </del>
-                    @endif
+                    <a href="{{ $link['url'] }}">
+                        {{ $link['label'] }}
+                    </a>
                 </li>
             @endforeach
         </ul>
+        <input type="text">
     </nav>
 </header>
