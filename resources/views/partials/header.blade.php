@@ -1,5 +1,5 @@
 @php
-    $links = [
+    $linksHeader = [
         [
             'url' => '/',
             'label' => 'DC',
@@ -61,7 +61,7 @@
     <section>
         <nav class="container d-flex p-3">
             <ul class="h-100 d-flex list-unstyled justify-content-between align-items-center flex-grow-1 me-3">
-                @foreach ($links as $link)
+                @foreach ($linksHeader as $link)
                     <li class="h-100">
                         <a href="{{ $link['url'] }}">
                             {{ $link['label'] }}
