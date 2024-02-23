@@ -28,8 +28,17 @@ footer{
         list-style: none;
         padding:0;
     }
-    >*:first-child{
+    #footer-top{
        background-image: url('../img/footer-bg.jpg');
        background-size: contain;
+       .col-6:last-of-type{
+        background-image: url('../img/dc-logo-bg.png');
+        background-size: cover;
+        background-position: center;
+
+       }
+    }
+    #footer-bottom{
+        background-color: $footer-color;
     }
 }

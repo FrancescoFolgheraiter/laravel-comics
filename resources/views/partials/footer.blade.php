@@ -32,10 +32,17 @@ $linksFooter =[
         'Shop DC',
         'Shop DC collectibles'
     ]
+];
+$socialFooter =[
+    'footer-facebook.png',
+    'footer-twitter.png',
+    'footer-youtube.png',
+    'footer-pinterest.png',
+    'footer-periscope.png'
 ]
 @endphp
 <footer>
-    <section>
+    <section id="footer-top">
         <div class="container text-white">
             <div class="row">
                 <div class="col-6">
@@ -55,13 +62,29 @@ $linksFooter =[
                         </li>
                         @endforeach
                     </ul>
+                    <p>
+                        All Site Content TIM and 2020 DC Entertaiment, unless otherwise noted here. ALl rights reserverd.<br>Cookies Settigs
+                    </p>
+                </div>
+                <div class="col-6">
+
                 </div>
             </div>
         </div>
     </section>
-    <section>
-        <div class="container">
-            ciao
+    <section id="footer-bottom">
+        <div class="container d-flex justify-content-between pt-3 pb-3">
+           <div>
+            <button type="button" class="btn btn-outline-primary text-white">SING-UP NOW!</button>
+           </div>
+           <div>
+            <h4>
+                FOLLOW US
+                @foreach($socialFooter as $elem)
+                <img src="{{ Vite::asset('resources/img/'.$elem) }}" alt="{{$elem}}">
+                @endforeach
+            </h4>
+           </div>
         </div>
     </section>
 </footer>
