@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $data = config('comics');
     $firstName = 'Gino';
     $lastName = 'Paoli';
 
@@ -39,7 +40,7 @@ Route::get('/', function () {
     */
     // dd(compact('firstName', 'lastName'));
 
-    return view('welcome', [
+    return view('home', [
         'firstName' => $firstName,
         'lastName' => $lastName,
     ]);
