@@ -59,12 +59,20 @@
         </div>
     </section>
     <section>
-        <nav class="container d-flex p-3">
-            <ul class="h-100 d-flex list-unstyled justify-content-between align-items-center flex-grow-1 me-3">
+        <nav class="container d-flex align-items-center ">
+            <ul class="d-flex list-unstyled justify-content-between align-items-center flex-grow-1 mb-1">
                 @foreach ($linksHeader as $link)
                     <li class="h-100">
-                        <a href="{{ $link['url'] }}">
+                        <a class="p-3" href="{{ $link['url'] }}">
+                            @if ($link['label']== 'DC')
+                            <div class="logo">
+                                <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Dc-logo">
+                            </div>
+                            @elseif($link['label']== 'shop')
+                                {{ $link['label'] }}
+                            @else
                             {{ $link['label'] }}
+                            @endif
                         </a>
                     </li>
     
@@ -73,7 +81,7 @@
             <div>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="btn btn-outline-primary " type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                   </form>
             </div>
         </nav>

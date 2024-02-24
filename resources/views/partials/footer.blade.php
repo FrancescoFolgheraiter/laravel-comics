@@ -43,19 +43,21 @@ $socialFooter =[
 @endphp
 <footer>
     <section id="footer-top">
-        <div class="container text-white">
+        <div class="container">
             <div class="row g-0">
                 <div class="col-6">
                     <ul class="d-flex flex-wrap">
                         @foreach($linksFooter as $key => $link)
                         <li class="m-3">
-                            <h4>
+                            <h4 class="text-white">
                                 {{$key}}
                             </h4>
                             <ul>
                                 @foreach($link as $key=> $elem)
                                 <li>
-                                    {{$elem}}
+                                    <a class="footer-link" href="">
+                                        {{$elem}}
+                                    </a>
                                 </li>
                                 @endforeach
                             </ul>
@@ -63,7 +65,7 @@ $socialFooter =[
                         @endforeach
                     </ul>
                     <p>
-                        All Site Content TIM and 2020 DC Entertaiment, unless otherwise noted here. ALl rights reserverd.<br>Cookies Settigs
+                        All Site Content TIM and 2020 DC Entertaiment, unless otherwise <a class=" underline"href="">noted here</a> . ALl rights reserverd.<br><a href="">Cookies Settigs</a>
                     </p>
                 </div>
                 <div class="col-6">
@@ -74,16 +76,18 @@ $socialFooter =[
     </section>
     <section id="footer-bottom">
         <div class="container d-flex justify-content-between pt-3 pb-3">
-           <div>
-            <button type="button" class="btn btn-outline-primary text-white">SING-UP NOW!</button>
+            <div>
+                <button type="button" class="btn btn-outline-primary text-white">SING-UP NOW!</button>
            </div>
-           <div>
-            <h4>
-                FOLLOW US
+           <div class="d-flex social">
+                <h4 class="me-2 text-primary ">
+                    FOLLOW US
+                </h4>
                 @foreach($socialFooter as $elem)
-                <img src="{{ Vite::asset('resources/img/'.$elem) }}" alt="{{$elem}}">
+                <div class="me-2">
+                    <img src="{{ Vite::asset('resources/img/'.$elem) }}" alt="{{$elem}}">
+                </div>
                 @endforeach
-            </h4>
            </div>
         </div>
     </section>
