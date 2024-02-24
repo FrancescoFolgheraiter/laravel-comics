@@ -3,11 +3,15 @@
 @section('page-title', 'Home DC')
 
 @section('main-content')
-<section>
-    <h1>
-        DC 
-    </h1>
-
+<section id="home-hero" class="d-flex">
+    <div class="container d-flex flex-column justify-content-between">
+        <div class="align-self-end m-5">
+            <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Dc-logo">
+        </div>
+        <h1 class="m-5">
+            Evil supermen
+        </h1>
+    </div>
 </section>
 <section id="home-carousel">
     <!--carosello bootstrap-->
